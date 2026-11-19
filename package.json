@@ -1,0 +1,31 @@
+{
+  "name": "cliniqx-svelte",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/markdown-it": "^14.2.0",
+    "@types/node": "^24.19.2",
+    "autoprefixer": "^10.4.16",
+    "carbon-preprocess-svelte": "^0.11.61",
+    "postcss": "^8.4.31",
+    "svelte": "^5.57.3",
+    "svelte-check": "^4.7.7",
+    "tailwindcss": "^3.3.5",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.6"
+  },
+  "dependencies": {
+    "carbon-components-svelte": "^0.114.3",
+    "carbon-icons-svelte": "^13.18.0",
+    "markdown-it": "^15.0.3"
+  }
+}

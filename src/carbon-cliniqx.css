@@ -1,0 +1,94 @@
+/**
+ * MediCaid on Carbon — corporate flagship theme.
+ *
+ * Carbon principles followed:
+ * 1. Consistency — color/spacing/type come from Carbon tokens (--cds-*),
+ *    remapped to the MediCaid corporate palette. No invented scales.
+ * 2. Hierarchy — Carbon 12-col Grid + a strict display/body type scale.
+ * 3. Accessibility — Carbon focus rings, contrast and keyboard behavior kept.
+ * 4. Restraint — Grid / Tile / Tag / Content only. Buttons are our own
+ *    signature component (MButton) so they render identically everywhere.
+ *
+ * Signature (documented deviations):
+ * - Radius 0 on everything. Sharp rectangles are the brand mark.
+ * - Display face Space Grotesk for headlines; Inter for body (Carbon scale kept).
+ * - Brand blue #128ef3 for interactive; ink #0a2540 for text.
+ */
+
+:root,
+:root[theme='white'],
+:root[theme='g10'] {
+  /* Interactive — corporate blue */
+  --cds-interactive-01: #128ef3;
+  --cds-interactive-02: #0a2540;
+  --cds-button-primary: #128ef3;
+  --cds-button-primary-hover: #0e7fd8;
+  --cds-button-primary-active: #0b6cb8;
+  --cds-link-primary: #128ef3;
+  --cds-link-primary-hover: #0e7fd8;
+  --cds-focus: #128ef3;
+  --cds-focus-inverse: #128ef3;
+  --cds-interactive: #128ef3;
+
+  /* Text — corporate ink */
+  --cds-text-01: #0a2540;
+  --cds-text-primary: #0a2540;
+  --cds-text-02: #5b6b82;
+  --cds-text-secondary: #5b6b82;
+  --cds-text-05: #5b6b82;
+
+  /* Support */
+  --cds-support-success: #198038;
+  --cds-support-info: #128ef3;
+
+  /* Surfaces */
+  --cds-background: #f7f7f7;
+  --cds-ui-background: #f7f7f7;
+  --cds-layer-01: #ffffff;
+  --cds-field-01: #ffffff;
+  --cds-ui-01: #ffffff;
+  --cds-border-subtle: #e2e8f0;
+  --cds-ui-03: #e2e8f0;
+}
+
+/* Type: display face on Carbon heading classes + body elsewhere */
+.bx--tile,
+.bx--tag,
+.bx--link,
+.bx--list--ordered,
+.bx--list--unordered {
+  font-family: 'Inter', 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Sharp signature: radius 0 on all Carbon + all layout elements */
+.bx--tile,
+.bx--tag,
+.bx--btn,
+.bx--structured-list,
+.bx--breadcrumb,
+.bx--tag-set,
+.bx--grid,
+.bx--row,
+.bx--col,
+.bx--content,
+.bx--list--ordered,
+.bx--list--unordered,
+div, section, header, footer, a, button, span, img {
+  border-radius: 0 !important;
+}
+
+.bx--tile {
+  border: 1px solid var(--cds-border-subtle, #e2e8f0);
+  box-shadow: 0 1px 2px rgba(10, 37, 64, 0.05), 0 16px 40px -20px rgba(10, 37, 64, 0.25);
+}
+
+/* Focus always visible — a11y non-negotiable */
+.bx--btn:focus,
+.bx--tag:focus,
+.bx--link:focus,
+.bx--tile:focus,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--cds-focus);
+  outline-offset: 2px;
+}
